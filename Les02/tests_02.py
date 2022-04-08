@@ -3,7 +3,7 @@
 from copy import deepcopy
 import unittest
 
-from Les02 import answers_02
+import answers_02
 
 SORTED_INT_LIST = [1, 7, 15, 20, 30]
 SORTED_RESULT_PREPEND = [0, 1, 7, 15, 20, 30]
