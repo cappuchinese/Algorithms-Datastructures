@@ -23,7 +23,7 @@
     - Idem, maar bepalen wat de grootste waarde in een Bag is?
 8. Kun je de Bag aanpassen zodat het bepalen van de grootste waarde in O(1) loopt?
 
-##H2.6 opdrachten
+## H2.6 opdrachten
 
 1. Zet de volgende expressies op volgorde van kleinste naar grootste als n -> oneindig:
     - n*log(n)
