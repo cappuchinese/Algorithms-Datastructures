@@ -29,3 +29,43 @@ O(n) met O als functie en n de variabele, geeft tijdsverloop aan
 - x aantal nested loops = O(n^x)
 - Exponentieel = O(a^n)
 - Logaritmisch = O(log n)
+
+## Stack
+- LIFO structuur: Last In, First Out
+```
+s = Stack()         s.isEmpty() -> True         s = []
+                    s.peek() -> null
+                    s.size() -> 0
+
+s.push(5)           s.isEmpty() -> False        s = [5]
+                    s.peek() -> 5
+                    s.size() -> 1
+
+s.push(8)           s.peek() -> 8               s = [5, 8]
+                    s.size() -> 2
+
+s.push(7)           s.peek() -> 7               s = [5, 8, 7]
+                    s.size() -> 3
+
+s.pop()             s.peek() -> 8               s = [5, 8]
+                    s.size() -> 2
+```
+
+## Queue
+- FIFO structuur: First In, First Out
+```
+q = Queue()         q.isEmpty() -> True         q = []
+                    q.size() -> 0
+
+q.enqueue(5)        q.isEmpty() -> True         q = [5]
+                    q.size() -> 1
+
+q.enqueue(8)        q.size() -> 2               q = [5, 8]
+
+q.enqueue(7)        q.size() -> 3               q = [5, 8, 7]
+
+q.dequeue()         q.size() -> 2               q = [8, 7]
+```
+
+### Een Queue van Stacks
+Alle bovenste items eerst naar een andere Stack. Dan de laatste item checken.
