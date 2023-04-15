@@ -1,0 +1,51 @@
+Naam: IsPalindroom
+Doel: bepaalt of een string een palindroom is
+precondities: b is bij eerste aanroep True
+postcondities: -
+Input: string S
+	    boolean b
+output: True als S is een palindroom, anders False
+
+Algoritme:
+	
+	#grenswaarde
+	als S.lengte =< 1:
+		b = True
+	anders:
+		als b == True:		
+			#ga naar grenswaarde
+			e = S[0]    #of: e = eerste karakter van S
+						#of: maak e eerste karakter van S
+						#of: e <- S[0]
+			l = S[S.length - 1]
+			als e == l:
+				#recursieve aanroep
+				S = S[1:-1]
+				b = IsPalindroom(S, b)
+			anders:
+				b = False
+	return b
+
+Alternatief:
+Input:
+	string S
+	integer begin
+	integer einde
+	boolean b
+pre:
+	bij eerste aanroep wijst begin naar eerste karakter van S
+	bij eerste aanroep wijst einde naar laatste karakter van S
+	b is bij eerste aanroep True
+
+Algoritme:
+	als begin >= einde en b == True:
+		b = True	
+	anders:
+		als b == True:
+			als S[begin] == S[einde]:
+				begin = begin + 1
+				einde = einde - 1	
+				b = IsPalindroom(S, b, begin, einde)
+			anders:
+				b = False
+	return b

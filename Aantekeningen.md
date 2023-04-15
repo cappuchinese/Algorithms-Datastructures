@@ -67,5 +67,45 @@ q.enqueue(7)        q.size() -> 3               q = [5, 8, 7]
 q.dequeue()         q.size() -> 2               q = [8, 7]
 ```
 
-### Een Queue van Stacks
-Alle bovenste items eerst naar een andere Stack. Dan de laatste item checken.
+## Zoek algoritmes
+Linear search:
+```python
+def linear_search(L, item):
+	n = len(L)
+	for i in range(n):
+		if L[i] == item:
+			return True
+	return False
+```
+
+Binary search:
+```python
+def binsearch1(L, item):
+	low = 0
+	high = len(L) – 1
+	while low <= high:
+		mid = (high + low) // 2
+		if L[mid] == item:
+			return True
+		elif item < L[mid]:
+			high = mid – 1
+		else:
+			low = mid + 1
+	return False
+
+def binsearch2(L, item):
+	mid = len(L) // 2
+	if L[mid] == item:
+		return True
+	elif mid == 1:
+		return False
+	elif item < L[mid]:
+		return binsearch2(L[:mid])
+	else:
+		return binsearch2(L[mid:])
+```
+
+## Sorteer algoritme
+Bubble sort: Itereert elke keer en vergelijkt 2 consecutive items met elkaar en zet de hoogste omhoog. Blijft het herhalen tot het gesorteerd is.
+Selection sort: Zoekt de kleinste item en zet hem op de goede plaats
+Insertion sort: Itereert door de sequentie en zet elk item op de goede plaats

@@ -1,4 +1,4 @@
-# Opgave 3
+# Pseudocode
 
 Bestudeer 3.6.
 

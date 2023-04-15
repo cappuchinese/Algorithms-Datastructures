@@ -1,4 +1,4 @@
-# Opgave 2
+# Arrays en BigO
 
 - Bestudeer boek p11
 - Bestudeer Arrays

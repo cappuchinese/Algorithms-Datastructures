@@ -1,4 +1,4 @@
-# Opgave 1
+# UML implementatie
 
 - Lees H1 (zou al bekend moeten zijn)
 - Bestudeer H2
